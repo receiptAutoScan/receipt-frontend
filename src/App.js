@@ -1,6 +1,9 @@
+import Excel from './pages/Main';
+
 function App() {
   return (
     <>
+      <Excel/>
     </>
   );
 }

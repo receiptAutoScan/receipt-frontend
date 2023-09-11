@@ -1,6 +1,12 @@
+import Layout from "../layouts/Layout";
+import Test from "../components/uploadExcel/Test";
+
 function Main(){
     return(
-        <h1>메인 화면</h1>
+        <>
+            <Layout/>
+            <Test/>
+        </>
     )
 }
 export default Main;
