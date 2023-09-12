@@ -1,6 +1,12 @@
+import Layout from "../layouts/Layout";
+import ExcelUpload from "../components/uploadExcel/ExcelUpload";
+
 function Main(){
     return(
-        <h1>메인 화면</h1>
+        <>
+            <Layout/>
+            <ExcelUpload/>
+        </>
     )
 }
 export default Main;
