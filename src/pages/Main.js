@@ -1,11 +1,11 @@
 import Layout from "../layouts/Layout";
-import Test from "../components/uploadExcel/Test";
+import ExcelUpload from "../components/uploadExcel/ExcelUpload";
 
 function Main(){
     return(
         <>
             <Layout/>
-            <Test/>
+            <ExcelUpload/>
         </>
     )
 }
