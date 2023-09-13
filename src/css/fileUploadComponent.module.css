@@ -1,0 +1,14 @@
+.fileUploadBox {
+    background-color: gray;
+    width: 40%;
+    height: 500px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    margin: auto;
+    margin-top: 300px;
+}
+
+.text {
+    font-size: 30px;
+}
