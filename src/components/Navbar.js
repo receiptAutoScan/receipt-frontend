@@ -7,7 +7,7 @@ function Navbar(){
                 <li><NavLink to="/main">Home</NavLink></li>
             </ul>
         </div>
-    )
+    )``
 }
 
 export default Navbar;
