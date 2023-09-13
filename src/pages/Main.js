@@ -5,7 +5,6 @@ import ExcelInquire from "../components/uploadExcel/Test";
 function Main(){
     return(
         <>
-            <Layout/>
             <ExcelUpload/>
             <ExcelInquire/>
         </>
