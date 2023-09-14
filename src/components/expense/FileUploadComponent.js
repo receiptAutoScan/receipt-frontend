@@ -3,6 +3,7 @@ import { useDropzone } from "react-dropzone";
 import style from "../../css/fileUploadComponent.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
+import { uploadReceiptImage } from '../../apis/expense/ReceiptUploadAPI';
 
 
 function FileUploadComponent() {
@@ -13,7 +14,18 @@ function FileUploadComponent() {
             return;
         }
 
-        
+        console.log(acceptedFiles.length);
+
+        const formData = new FormData();
+
+        for(let i = 0; i < acceptedFiles.length; i++) {
+            formData.append(`images`, acceptedFiles[i]);
+        }
+
+        console.log(formData);
+
+        uploadReceiptImage(formData);
+
     }, []);
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({ 
