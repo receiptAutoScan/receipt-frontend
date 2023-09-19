@@ -68,7 +68,7 @@ function Menu(){
                                 <td>부가세</td>
                             </tr>
                         
-                            {results.map(item => <ExcelInquireMonYear key={item.monYearReceiptNum} item={item}/>)}
+                            {results.map(item => <ExcelInquireMonYear key={item.monYearDate} item={item}/>)}
                         </tbody>
                     }
                     {btnState === 'btn3'&&
