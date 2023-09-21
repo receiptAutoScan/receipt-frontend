@@ -1,0 +1,97 @@
+/* Style for the Chatbox container */
+.Chatbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Aligns .ChatboxInput to the bottom */
+  width: 350px;
+  /* Set your desired width */
+  height: 450px;
+  /* Set your desired height */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+
+/* Style for the Chatbox header */
+.ChatboxHeader {
+  background-color: #007bff;
+  /* Change to your desired header background color */
+  color: #fff;
+  /* Change to your desired header text color */
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Style for the Chatbox content */
+.ChatboxContent {
+  flex-grow: 1;
+  /* Take up remaining vertical space */
+  padding: 10px;
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
+/* Style for the Chatbox input area */
+.ChatboxInputBox {
+  padding: 10px;
+  background-color: #f9f9f9;
+  /* Change to your desired input background color */
+  border-top: 1px solid #ccc;
+}
+
+/* You can add more styles and customize the appearance further as needed */
+.ChatboxInput {
+  width: 76%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.ChatbotSendButton {
+  margin-left: 10px;
+  height: 30px;
+}
+
+.AIChatItem {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.UserChatItem {
+  background-color: #ffa600;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.ChatbotButton {
+  width: 100px;
+  /* Adjust the width and height as needed for your circle */
+  height: 100px;
+  background-color: #007bff;
+  /* Background color of the circle */
+  border-radius: 50%;
+  /* Makes the div a circle */
+  position: fixed;
+  bottom: 20px;
+  /* Adjust the distance from the bottom as needed */
+  right: 20px;
+  /* Adjust the distance from the right as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Text color inside the circle */
+  font-size: 18px;
+  /* Font size of the text inside the circle */
+}
