@@ -9,16 +9,14 @@ export default function ChatbotComponent() {
     const inputRef = useRef(null);
     const chatboxContentRef = useRef(null);
     const [chatShow, setChatShow] = useState(false);
+    const [chatHistory, setChatHistory] = useState([]);
 
     useEffect(() => {
 
+        setChatHistory([...chatHistory, { type: "AI", content: "안녕하세요! 오늘은 무엇을 도와드릴까요?" }]);
 
     }, []);
 
-    // 이전 채팅 내역 가져오기
-    // const getPastChats = () => {
-
-    // }
 
     const onKeyEnter = (e) => {
         if (e.key === "Enter") {
@@ -39,21 +37,28 @@ export default function ChatbotComponent() {
             return;
         }
 
+        setChatHistory([...chatHistory, { type: "user", content: chat }]);
+
+        // 채팅 입력창 초기화
+        inputRef.current.value = "";
+
+        // 채팅 아래로 스크롤
+        chatboxContentRef.current.scrollTop = chatboxContentRef.current.scrollHeight;
+        
         // 채팅 전송
         const response = await sendChatToServer(chat);
-
+        
         if (response) {
-            // 채팅창에 내용 추가
-            chatboxContentRef.current.innerHTML += `<div class="UserChatItem">${chat}</div><div class="AIChatItem">${response}</div>`;
 
+            setChatHistory([...chatHistory, { type: "user", content: chat }, { type: "AI", content: response }]);
+            
             // 채팅 아래로 스크롤
             chatboxContentRef.current.scrollTop = chatboxContentRef.current.scrollHeight;
 
-            // 채팅 입력창 초기화
-            inputRef.current.value = "";
+            console.log(chatHistory);
         }
 
-
+        
     }
 
     const chatbotToggle = (e) => {
@@ -69,9 +74,17 @@ export default function ChatbotComponent() {
                         <FontAwesomeIcon icon={faX} style={{color: "#ffffff", float: "right", marginRight: "5px"}} onClick={chatbotToggle}/>
                     </div>
                     <div className="ChatboxContent" ref={chatboxContentRef}>
-                        <div className="AIChatItem">
-                            어시스턴트: 안녕하세요! 오늘은 무엇을 도와드릴까요?
-                        </div>
+                        {chatHistory &&
+
+                            chatHistory.map((data) => {
+                                const good = data.type === "user" ? "UserChatItem" : "AIChatItem";
+                                return (
+                                    <div className={good}>
+                                        {data.content}
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                     <div className="ChatboxInputBox">
                         <input
