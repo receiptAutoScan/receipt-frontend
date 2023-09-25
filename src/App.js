@@ -10,7 +10,8 @@ function App() {
 
     <BrowserRouter>
       <Routes path="/" element={<Layout/>}>
-        <Route index element={<Excel/>} />
+        <Route index element={<Layout/>}/>
+        <Route path="excel" element={<Excel/>} />
         <Route path="receiptUpload" element={<ReceiptUploadPage/>} />
         <Route path="expenses" element={<ExpenseReadPage/>} />
       </Routes>
