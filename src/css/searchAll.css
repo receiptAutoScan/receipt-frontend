@@ -1,0 +1,62 @@
+.w100{
+    width: 100%;
+}
+
+.df{
+    display: flex;
+}
+
+.fdc{
+    flex-direction: column;
+}
+
+.pcc{
+    place-content: center;
+}
+
+.pic{
+    place-items: center;
+}
+
+.w30{
+    width: 30%;
+}
+.jcc{
+    justify-content: center;
+}
+
+.w10{
+    width: 10%;
+}
+
+.w50p{
+    width: 50px;
+}
+
+.h50p{
+    height: 50px;
+}
+
+.h150p{
+    height: 150px;
+}
+.b1sb{
+    border:1px solid black;
+}
+.jcsb{
+    justify-content: space-between;
+}
+.hc:hover{
+    cursor: pointer;
+}
+
+.bgb{
+    background-color: rgba(000, 000, 000, 0.4);
+}
+
+.fileInput input:nth-child(1){
+    margin-right: 7px;
+}
+.fileInput input:nth-child(2){
+    margin-left: 7px;
+}

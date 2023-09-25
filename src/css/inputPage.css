@@ -1,0 +1,14 @@
+.inputpageMain{
+    width: 100%;
+    height: 750px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.inputExcelMain{
+    display: flex;
+    place-content: center;
+    place-items: center;
+    height: 700px;
+}

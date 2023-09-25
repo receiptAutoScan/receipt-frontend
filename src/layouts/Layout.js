@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import Main from '../components/Main';
+import Main from '../pages/RealMain';
 import {Outlet} from 'react-router-dom';
 import '../css/reset.css'
 function Layout() {
