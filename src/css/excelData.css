@@ -1,0 +1,25 @@
+.excelData{
+    height: 60%;
+    margin: 100px 0;
+}
+
+.excelSearch{
+    height: 60%;
+    margin: 10px 0 50px 0;
+}
+
+.excelSearch tbody tr:nth-child(-n+2){
+    background-color: #f5f5f5;
+}
+.excelSearch tbody tr td:nth-child(1){
+    background-color: #f5f5f5;
+}
+.excelSearch table,.excelSearch tbody{
+    border: none;    
+}
+.excelSearch table{
+    box-shadow: 0px -5px 3px 0px #fdd403, 0px -7px 3px 0px #006adb;
+}
+.excelSearch td{
+    border: 1px solid #000000;
+}

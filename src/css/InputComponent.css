@@ -1,0 +1,60 @@
+.input_one_dep{
+    width: 380px;
+    height: 320px;
+    border-radius: 30px;
+    border: 1px solid rgba(000, 000, 000, 0.8);
+    box-shadow: 3px 5px rgb(214, 214, 214, 0.8);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    justify-content: space-evenly;
+}
+.input_one_dep:hover{
+    background-color: rgba(123, 123, 123, 0.1);
+}
+.input_two_dep_one{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    place-items: center;
+}
+
+.input_two_dep_one_one{
+    background-image: url("../img/young.png");   
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70px;
+    height: 84px;
+}
+.excelimg{
+    background-image: url("../img/excel.png");
+}
+.input_two_dep_one_two{
+    font-size: 24px;
+    font-weight: bold;
+}
+.input_two_dep_two{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.input_two_dep_thr{
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+.youngd1{
+    margin-right: 30px;
+}
+.exceld1{
+    margin-left: 30px;
+}
+
+.excelp1{
+    letter-spacing: 3px;
+}
+
+.excelp2{
+    letter-spacing: 1px;
+}
