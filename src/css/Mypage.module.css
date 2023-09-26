@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+  flex-direction: column; /* 세로로 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  height: 100vh; /* 필요에 따라 높이 설정 */
+}
+
+.Profile {
+    width: 1440px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.SocialId {
+    width: 1440px;
+    height: 250px;
+    display:flex;
+    justify-content: center;
+}
+
+.label1 {
+    font-size: 50px;
+    margin-right: 70px;
+}
+
+.input1 {
+    width: 400px;
+    height: 60px;
+    font-size: 50px;
+}
+
+.Button {
+    width: 1440px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.Btn1 {
+    width: 220px;
+    height: 65px;
+    background-color: white;
+    border: solid black 2px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.idstyle {
+    width: 400px;
+    height: 60px;
+    margin-left: 80px;
+}
