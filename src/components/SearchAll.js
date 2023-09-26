@@ -22,7 +22,6 @@ function SearchAll() {
             case "매입": setStateMenu(2); e.target.className += " bgb"; break;
             case "수익": setStateMenu(3); e.target.className += " bgb"; break;
             default: break;
-        }
 
 
 
@@ -67,7 +66,7 @@ function SearchAll() {
                 }
                 <div className="df w10 pcc jcse">
                     <div onClick={onClickHandler} className="w50p h50p df pcc pic b1sb hc tbg bgb">매출</div>
-                    <div onClick={onClickHandler} className="w50p h50p df pcc pic b1sb hc tbg">매입</div>
+                    <div onClick={onClickHandler} className="w50p h50p df pcc pic b1sb hc tbg">지출</div>
                     <div onClick={onClickHandler} className="w50p h50p df pcc pic b1sb hc tbg">수익</div>
                 </div>
 
