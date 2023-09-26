@@ -1,0 +1,35 @@
+.Container {
+     display: flex;
+  flex-direction: column; /* 세로로 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  height: 100vh; /* 필요에 따라 높이 설정 */
+
+}
+
+.Buttons {
+    width: 280px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    row-gap: 20px;
+}
+
+
+
+.loginbtn {
+    cursor: pointer;
+    width: 430px;
+    
+}
+
+.h1 {
+    font-size: 100px;
+    
+}
+
+.mainImg{
+    width: 500px;
+    height: 500px;
+}
