@@ -3,7 +3,7 @@ import { getExpenses } from '../../apis/expense/ExpenseAPI';
 import ExpenseItem from './ExpenseItem';
 import '../../css/table.css';
 
-export default function ExpenseList() {
+export default function ExpenseList(props) {
     
     const [results, setResults] = useState([]);
     
@@ -13,18 +13,11 @@ export default function ExpenseList() {
     }, [])
     
     useEffect(() => {
-
-        
-
-        console.log(results);
-
-        
     }, [results])
 
     
     const getData = async () => {
-        const data = await getExpenses();
-        setResults(data);
+        setResults(await getExpenses());
     }
     
 

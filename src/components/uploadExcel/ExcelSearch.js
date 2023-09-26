@@ -9,7 +9,6 @@ function Menu(){
     useEffect(
         ()=>{         
             async function inquireExcel (){
-                console.log(btnState)
                 if(btnState === 'btn1'){
                     setResults(await inquireExcelByDay())
                 }else if(btnState === 'btn2'){

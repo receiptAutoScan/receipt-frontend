@@ -13,8 +13,6 @@ export function excelUpload(json){
             body: json,
         })
         .then((result)=>{
-            console.log(result);
-            console.log(result.status);
             if(result.status === 201){
                 console.log('저장완료');
             }else{
@@ -31,7 +29,6 @@ export function inquireExcelByDay(json){
         })
         .then(res=> res.json())
         .then(json => {
-            console.log(json)
             if(json.length === 0){
                 alert("등록된 지출 표가 없습니다")
             }
@@ -42,7 +39,7 @@ export function inquireExcelByDay(json){
 
 export function inquireExcelByMon(json){
     return new Promise((resolve,reject)=>{
-        fetch('http://localhost:8080/revenueMonth', {
+        fetch('http://localhost:8080/revenue/monthly', {
             method: "GET",
         })
         .then(res=> res.json())
