@@ -22,10 +22,9 @@ function FileUploadComponent() {
             formData.append(`images`, acceptedFiles[i]);
         }
 
-        console.log(formData);
-
         uploadReceiptImage(formData);
 
+        alert("영수증 데이터가 업로드 되었습니다.");
     }, []);
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({ 

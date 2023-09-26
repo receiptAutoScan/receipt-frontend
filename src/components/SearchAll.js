@@ -3,6 +3,7 @@ import "../css/InputComponent.css";
 import { Link } from "react-router-dom";
 import ExcelSearch from "./uploadExcel/ExcelSearch";
 import "../css/searchAll.css";
+import ExpenseList from './expense/ExpenseList';
 function SearchAll(){
     const [stateMenu, setStateMenu] = useState(1);
 
@@ -15,6 +16,7 @@ function SearchAll(){
             case "매출" : setStateMenu(1);e.target.className+=" bgb"; break;
             case "매입" : setStateMenu(2);e.target.className+=" bgb"; break;
             case "수익" : setStateMenu(3);e.target.className+=" bgb"; break;
+            default : break;
         }
     }
 
@@ -33,7 +35,7 @@ function SearchAll(){
             </div>
             <div>
                 { stateMenu === 1 && 
-                    <div>1</div>
+                    <ExpenseList/>      
                 }
 
                 { stateMenu === 2 && 
