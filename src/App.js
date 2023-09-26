@@ -7,6 +7,9 @@ import InputPage from './pages/InputPage';
 import InputExcel from './pages/InputExcel';
 import InputExpense from './pages/InputExpense';
 import SearchPage from './pages/SearchPage';
+import Login from './pages/Login';
+import Oauth from './pages/Oauth';
+import MyPage from './pages/MyPage';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path="input/expense" element={<InputExpense/>} />
         <Route path="search" element={<SearchPage/>} />        
         <Route path="expenses" element={<ExpenseReadPage/>} />
+        <Route path="login" element={<Login/>} />
+        <Route path="auth/kakao/callback" element={<Oauth/>} />
+        <Route path="mypage" element={<MyPage/>} />
       </Routes>
     </BrowserRouter>
   );

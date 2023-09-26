@@ -16,7 +16,7 @@ function Oauth() {
 
     useEffect(
         () => {
-            alert("dddd")
+            alert("로그인중....")
             dispatch(callKakaoLoginAPI(code));
         }
     )
