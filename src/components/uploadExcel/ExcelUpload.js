@@ -63,9 +63,7 @@ function Upload(){
         noKeyboard: true
      });
         return (
-            <div className='w100'>
-                {excelState  ? 
-                
+            <div className='w100'>                
                 <div className={ `${style.fileUploadBox}` } {...getRootProps()}>
                     <input {...getInputProps()}/>
                     <FontAwesomeIcon icon={faSquarePlus} size="7x" style={{marginTop : "150px", cursor : "pointer"}} onClick={open}/>
@@ -75,7 +73,6 @@ function Upload(){
                             <p className={`${style.text}`}>파일을 Drag & Drop 하거나 클릭해서 선택해주세요</p>
                     }
                 </div>
-                : <ExcelData/>}
             </div>
         )
 

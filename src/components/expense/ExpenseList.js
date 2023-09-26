@@ -23,16 +23,22 @@ export default function ExpenseList(props) {
 
     return (
         <table>
-            <thead>
-                <tr>
-                    <th>거래처</th>
-                    <th>거래일자</th>
-                    <th>금액</th>
-                    <th>품목</th>
-                </tr>
-            </thead>
             <tbody>
-                {results.map(item => <ExpenseItem key={item.expenseId} data={item}/>)}
+                <tr>
+                    <td></td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>거래처</td>
+                    <td>거래일자</td>
+                    <td>금액</td>
+                    <td>품목</td>
+                </tr>
+                {results.map((item,index) => <ExpenseItem key={item.expenseId} data={item} index={index+2}/>)}
             </tbody>
         </table>
     )

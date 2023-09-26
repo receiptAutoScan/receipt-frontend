@@ -9,7 +9,7 @@ export function getExpenses() {
         }).then(res => res.json())
         .catch(error => console.log(error));
 
-
+        
         
         resolve(result);
     });

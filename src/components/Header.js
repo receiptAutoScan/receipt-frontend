@@ -27,7 +27,7 @@ function Header(){
                     <Link to="/search">
                         <div >
                             <div className='search'></div>
-                            자료 입력
+                            자료 조회
                         </div>
                     </Link>
                 </div>
