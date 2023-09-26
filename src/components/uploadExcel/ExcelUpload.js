@@ -27,7 +27,7 @@ function Upload(){
             reader.onabort = () => console.log('file reading was aborted')
             reader.onerror = () => console.log('file reading has failed')
 
-            reader.onload = async(e) =>{
+            reader.onload = (e) =>{
                 const file = e.target.result;
                 setFileName(file.name);
                 var workbook = XLSX.read(file, { type: rABS ? "binary" : "array" })
@@ -36,11 +36,16 @@ function Upload(){
                 const jsonData = XLSX.utils.sheet_to_json(worksheet);
                 const json = JSON.stringify(jsonData);
                 setExcelState(false);
-                await excelUpload(json);
+                excelUpload(json);
             }
 
-                if (rABS) reader.readAsBinaryString(file);
-                else reader.readAsArrayBuffer(file);
+                if (rABS){
+                    reader.readAsBinaryString(file)
+                    excelState = false
+                }else{
+                    reader.readAsArrayBuffer(file)
+                    excelState = true
+                }
             }
         )
         
@@ -57,23 +62,23 @@ function Upload(){
         noClick: true,
         noKeyboard: true
      });
-    if(excelState === true){
         return (
-            <div className={ `${style.fileUploadBox}` } {...getRootProps()}>
-                <input {...getInputProps()}/>
-                <FontAwesomeIcon icon={faSquarePlus} size="7x" style={{marginTop : "150px", cursor : "pointer"}} onClick={open}/>
-                {
-                    isDragActive ?
-                        <p className={`${style.text}`}>파일을 여기에 드롭해주세요</p>:
-                        <p className={`${style.text}`}>파일을 Drag & Drop 하거나 클릭해서 선택해주세요</p>
-                }
+            <div className='w100'>
+                {excelState  ? 
+                
+                <div className={ `${style.fileUploadBox}` } {...getRootProps()}>
+                    <input {...getInputProps()}/>
+                    <FontAwesomeIcon icon={faSquarePlus} size="7x" style={{marginTop : "150px", cursor : "pointer"}} onClick={open}/>
+                    {
+                        isDragActive ?
+                            <p className={`${style.text}`}>파일을 여기에 드롭해주세요</p>:
+                            <p className={`${style.text}`}>파일을 Drag & Drop 하거나 클릭해서 선택해주세요</p>
+                    }
+                </div>
+                : <ExcelData/>}
             </div>
         )
-    }else{
-        return (
-            <ExcelData/>
-        )
-    };
+
     // const handleFile = async (e)=>{
 
     //     if(e.target.value.substr(e.target.value.length-4) === 'xlsx' || e.target.value.substr(e.target.value.length-3) === 'xls'){

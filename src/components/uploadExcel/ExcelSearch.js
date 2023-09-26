@@ -40,23 +40,13 @@ function Menu(){
                                 <td>B</td>                                
                                 <td>C</td>
                                 <td>D</td>
-                                <td>E</td>
-                                <td>F</td>
-                                <td>G</td>
-                                <td>H</td>
-                                <td>I</td>
                             </tr>
                             <tr>     
                                 <td>1</td>                      
-                                <td>년-월</td>
-                                <td>영업일수</td>                                
-                                <td>총매출</td>
-                                <td>총할인</td>
-                                <td>실매출</td>
-                                <td>영수건수</td>
-                                <td>영수단가</td>
-                                <td>가액</td>
-                                <td>부가세</td>
+                                <td>일자</td>
+                                <td>지점</td>                                
+                                <td>품목</td>
+                                <td>금액</td>
                             </tr>
                         
                             {results.map((item,index) => <ExcelInquire key={item.receiptNum} item={item} index={index+2}/>)}
@@ -71,23 +61,13 @@ function Menu(){
                                 <td>B</td>                                
                                 <td>C</td>
                                 <td>D</td>
-                                <td>E</td>
-                                <td>F</td>
-                                <td>G</td>
-                                <td>H</td>
-                                <td>I</td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>년-월</td>
-                                <td>영업일수</td>                                
-                                <td>총매출</td>
-                                <td>총할인</td>
-                                <td>실매출</td>
-                                <td>영수건수</td>
-                                <td>영수단가</td>
-                                <td>가액</td>
-                                <td>부가세</td>
+                            <td>1</td>                      
+                                <td>일자</td>
+                                <td>지점</td>                                
+                                <td>품목</td>
+                                <td>금액</td>
                             </tr>
                         
                             {results.map((item,index) => <ExcelInquireMonYear key={item.monYearDate} item={item} index={index+2}/>)}
@@ -101,23 +81,13 @@ function Menu(){
                                 <td>B</td>                                
                                 <td>C</td>
                                 <td>D</td>
-                                <td>E</td>
-                                <td>F</td>
-                                <td>G</td>
-                                <td>H</td>
-                                <td>I</td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>년-월</td>
-                                <td>영업일수</td>                                
-                                <td>총매출</td>
-                                <td>총할인</td>
-                                <td>실매출</td>
-                                <td>영수건수</td>
-                                <td>영수단가</td>
-                                <td>가액</td>
-                                <td>부가세</td>
+                                <td>1</td>                      
+                                <td>일자</td>
+                                <td>지점</td>                                
+                                <td>품목</td>
+                                <td>금액</td>
                             </tr>
                         
                             {results.map((item,index) => <ExcelInquireMonYear key={item.monYearDate} item={item} index={index+2}/>)}
