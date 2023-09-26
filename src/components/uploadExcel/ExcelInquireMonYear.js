@@ -6,14 +6,9 @@ const Inquire = ({item,index}) =>{
         <tr>
             <td>{index}</td>
             <td>{item.monYearDate}</td>
-            <td>{item.monYearDay}</td>
-            <td>{item.monYearTotal}</td>
-            <td>{item.monYearSale}</td>
-            <td>{item.monYearActual}</td>            
-            <td>{item.monYearReceiptNum}</td>
-            <td>{item.monYearReceiptPrice}</td>
-            <td>{item.monYearReceiptValue}</td>
-            <td>{item.monYearlySurtax}</td>
+            <td>{item.monYearRevenuePoint}</td>
+            <td>{item.monYearRevenueType}</td>
+            <td>{item.monYearRevenuePrice}</td>
         </tr>
     )
 }
