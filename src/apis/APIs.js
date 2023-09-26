@@ -14,9 +14,9 @@ export function excelUpload(json){
         })
         .then((result)=>{
             if(result.status === 201){
-                console.log('저장완료');
+                alert('등록 완료');
             }else{
-                console.log('저장실패');
+                alert('등록 실패');
             }
         }) 
     })

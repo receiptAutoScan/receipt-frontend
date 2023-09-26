@@ -22,14 +22,18 @@ export default function GetMonthlyList(props) {
     return (
         <>      
             <table>
-            <thead>
-                <tr>
-                    <th>거래일월</th>
-                    <th>총액</th>
-                </tr>
-            </thead>
             <tbody>
-                {results.map(item => <GetMonthlyItem key={item.transactionMonth} data={item}/>)}
+                <tr>
+                    <td></td>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>거래일월</td>
+                    <td>총액</td>
+                </tr>
+                {results.map((item,index) => <GetMonthlyItem key={item.transactionMonth} data={item} index={index}/>)}
             </tbody>
         </table>
         </>

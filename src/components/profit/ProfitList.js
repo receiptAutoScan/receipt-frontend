@@ -18,16 +18,22 @@ export default function ProfitList() {
     return (
         <>      
             <table>
-            <thead>
-                <tr>
-                    <th>거래일월</th>
-                    <th>매출액</th>
-                    <th>지출액</th>
-                    <th>순수익</th>
-                </tr>
-            </thead>
             <tbody>
-                {results.map(item => <ProfitItem key={item.transactionMonth} data={item}/>)}
+                <tr>
+                    <td></td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>거래일월</td>
+                    <td>매출액</td>
+                    <td>지출액</td>
+                    <td>순수익</td>
+                </tr>            
+                {results.map((item,index) => <ProfitItem key={item.transactionMonth} data={item} index={index+2}/>)}
             </tbody>
         </table>
         </>

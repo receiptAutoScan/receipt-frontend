@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function ExpenseItem({data}) {
+export default function ExpenseItem({data,index}) {
     
     const [businessPartner, setBusinessPartner] = useState(data.businessPartner);
     const [transactionDate, setTransactionDate] = useState(data.transactionDate);
@@ -44,10 +44,11 @@ export default function ExpenseItem({data}) {
     return (
         <>
             <tr id={data.expenseId}>
+                <td>{index}</td>
                 <td><input value={businessPartner} onChange={onChangeHandler} onKeyDown={onKeyDownHandler} id="1" readOnly/></td>
                 <td><input value={transactionDate} onChange={onChangeHandler} onKeyDown={onKeyDownHandler} id="2" readOnly/></td>
                 <td><input value={itemPrice} onChange={onChangeHandler} onKeyDown={onKeyDownHandler} id="3" readOnly/></td>
-                <td><input value={itemName} onChange={onChangeHandler} onKeyDown={onKeyDownHandler} id="4" readOnly/></td>
+                <td><textarea value={itemName} onChange={onChangeHandler} onKeyDown={onKeyDownHandler} id="4" readOnly/></td>
             </tr>
         </>
     )

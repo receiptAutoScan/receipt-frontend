@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import { inquireExcelByDay ,inquireExcelByMon ,inquireExcelByYear} from '../../apis/APIs';
 import ExcelInquire from './ExcelInquire'
 import ExcelInquireMonYear from './ExcelInquireMonYear'
+import Pagination from 'react-js-pagination'
 function Menu(){
     const [results,setResults] = useState([])
     const [btnState,setBtnState] = useState("btn1");
+    const [data, setData] = useState([]);
+    const [page, setPage] = useState(1);
+    const [items, setItems] = useState(20);
     useEffect(
         ()=>{         
             async function inquireExcel (){
@@ -22,7 +26,11 @@ function Menu(){
         }
         ,[btnState]
     )
-
+    const handlePageChange = (page) => { setPage(page); };
+    const itemChange = (e) => {
+        setItems(Number(e.target.value))
+    
+      }
     const handleBtn = async (e)=>{
         setBtnState(e.target.className)
     }
@@ -43,12 +51,15 @@ function Menu(){
                             <tr>     
                                 <td>1</td>                      
                                 <td>일자</td>
-                                <td>지점</td>                                
-                                <td>품목</td>
+                                <td>지점</td>                            
                                 <td>금액</td>
+                                <td>품목</td>
                             </tr>
                         
-                            {results.map((item,index) => <ExcelInquire key={item.receiptNum} item={item} index={index+2}/>)}
+                            {results.slice(
+                                items*(page-1),
+                                items*(page-1)+items
+                            ).map((item,index) => <ExcelInquire key={item.receiptNum} item={item} index={index+2}/>)}
                         </tbody>
                     }
 
@@ -69,7 +80,10 @@ function Menu(){
                                 <td>금액</td>
                             </tr>
                         
-                            {results.map((item,index) => <ExcelInquireMonYear key={item.monYearDate} item={item} index={index+2}/>)}
+                            {results.slice(
+                                items*(page-1),
+                                items*(page-1)+items
+                            ).map((item,index) => <ExcelInquireMonYear key={item.monYearDate} item={item} index={index+2}/>)}
                         </tbody>
                     }
                     {btnState === 'btn3'&&
@@ -93,6 +107,15 @@ function Menu(){
                         </tbody>
                     }
                 </table>
+                <div className='pagenation'>
+                    <Pagination
+                        activePage={page}
+                        itemsCountPerPage={items}
+                        totalItemsCount={results.length-1}
+                        pageRangeDisplayed={5}
+                        onChange={handlePageChange}>
+                    </Pagination>
+                </div>
             </div>
         </>
     )
